@@ -1,14 +1,15 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import NavBar from "@/components/nav-bar"
-import Footer from "@/components/footer"
-import FadeIn from "@/components/animations/fade-in"
-import StaggerContainer from "@/components/animations/stagger-container"
-import TextReveal from "@/components/animations/text-reveal"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import NavBar from "@/components/nav-bar";
+import Footer from "@/components/footer";
+import FadeIn from "@/components/animations/fade-in";
+import StaggerContainer from "@/components/animations/stagger-container";
+import TextReveal from "@/components/animations/text-reveal";
+import { HeroTitle } from "@/components/hero-titl";
 
 export default function BlogPage() {
   return (
@@ -17,20 +18,10 @@ export default function BlogPage() {
 
       <main className="flex-1">
         {/* Blog Hero */}
-        <section className="py-12 md:py-20 bg-muted">
-          <div className="container px-4 md:px-6">
-            <div className="max-w-3xl mx-auto text-center space-y-4">
-              <TextReveal>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Blog & Insights</h1>
-              </TextReveal>
-              <FadeIn delay={0.2}>
-                <p className="text-xl text-muted-foreground">
-                  Thoughts, tutorials, and insights about technology and development.
-                </p>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
+        <HeroTitle
+          title="Blog & Insights"
+          description="Thoughts, tutorials, and insights about technology and development."
+        />
 
         {/* Featured Post */}
         <section className="py-12 md:py-16">
@@ -47,17 +38,21 @@ export default function BlogPage() {
                     />
                   </div>
                   <div className="p-6 md:p-8">
-                    <p className="text-sm text-muted-foreground">May 7, 2023 • 10 min read</p>
+                    <p className="text-sm text-muted-foreground">
+                      May 7, 2023 • 10 min read
+                    </p>
                     <h2 className="text-2xl font-bold mt-2 md:text-3xl">
                       The Future of Web Development: Trends to Watch in 2023
                     </h2>
                     <p className="text-muted-foreground mt-4">
-                      Exploring emerging technologies and trends that will shape the future of web development, from
-                      AI-powered tools to new frameworks and methodologies.
+                      Exploring emerging technologies and trends that will shape
+                      the future of web development, from AI-powered tools to
+                      new frameworks and methodologies.
                     </p>
                     <Button asChild className="mt-6">
                       <Link href="/blog/future-of-web-development">
-                        Read full article <ArrowRight className="ml-2 h-4 w-4" />
+                        Read full article{" "}
+                        <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </div>
@@ -72,7 +67,9 @@ export default function BlogPage() {
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <FadeIn>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-8">All Articles</h2>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-8">
+                  All Articles
+                </h2>
               </FadeIn>
 
               <StaggerContainer className="grid gap-8">
@@ -89,16 +86,20 @@ export default function BlogPage() {
                           />
                         </div>
                         <div className="p-6 md:w-2/3">
-                          <p className="text-sm text-muted-foreground">May 7, 2023 • 10 min read</p>
-                          <h3 className="text-xl font-bold mt-2">Building Scalable React Applications</h3>
+                          <p className="text-sm text-muted-foreground">
+                            May 7, 2023 • 10 min read
+                          </p>
+                          <h3 className="text-xl font-bold mt-2">
+                            Building Scalable React Applications
+                          </h3>
                           <p className="text-muted-foreground mt-2">
-                            Learn how to structure your React applications for scalability and maintainability, with
-                            practical examples and best practices.
+                            Learn how to structure your React applications for
+                            scalability and maintainability, with practical
+                            examples and best practices.
                           </p>
                           <Link
                             href="/blog/building-scalable-react-applications"
-                            className="text-primary inline-flex items-center mt-4"
-                          >
+                            className="text-primary inline-flex items-center mt-4">
                             Read more <ArrowRight className="ml-1 h-4 w-4" />
                           </Link>
                         </div>
@@ -120,16 +121,20 @@ export default function BlogPage() {
                           />
                         </div>
                         <div className="p-6 md:w-2/3">
-                          <p className="text-sm text-muted-foreground">April 15, 2023 • 8 min read</p>
-                          <h3 className="text-xl font-bold mt-2">Optimizing Database Performance</h3>
+                          <p className="text-sm text-muted-foreground">
+                            April 15, 2023 • 8 min read
+                          </p>
+                          <h3 className="text-xl font-bold mt-2">
+                            Optimizing Database Performance
+                          </h3>
                           <p className="text-muted-foreground mt-2">
-                            Tips and techniques for improving database performance in production applications, from
+                            Tips and techniques for improving database
+                            performance in production applications, from
                             indexing to query optimization.
                           </p>
                           <Link
                             href="/blog/optimizing-database-performance"
-                            className="text-primary inline-flex items-center mt-4"
-                          >
+                            className="text-primary inline-flex items-center mt-4">
                             Read more <ArrowRight className="ml-1 h-4 w-4" />
                           </Link>
                         </div>
@@ -151,18 +156,20 @@ export default function BlogPage() {
                           />
                         </div>
                         <div className="p-6 md:w-2/3">
-                          <p className="text-sm text-muted-foreground">March 22, 2023 • 6 min read</p>
+                          <p className="text-sm text-muted-foreground">
+                            March 22, 2023 • 6 min read
+                          </p>
                           <h3 className="text-xl font-bold mt-2">
                             Introduction to TypeScript for JavaScript Developers
                           </h3>
                           <p className="text-muted-foreground mt-2">
-                            A beginner-friendly guide to TypeScript, explaining key concepts and how to migrate your
-                            JavaScript projects.
+                            A beginner-friendly guide to TypeScript, explaining
+                            key concepts and how to migrate your JavaScript
+                            projects.
                           </p>
                           <Link
                             href="/blog/introduction-to-typescript"
-                            className="text-primary inline-flex items-center mt-4"
-                          >
+                            className="text-primary inline-flex items-center mt-4">
                             Read more <ArrowRight className="ml-1 h-4 w-4" />
                           </Link>
                         </div>
@@ -184,18 +191,20 @@ export default function BlogPage() {
                           />
                         </div>
                         <div className="p-6 md:w-2/3">
-                          <p className="text-sm text-muted-foreground">February 10, 2023 • 12 min read</p>
+                          <p className="text-sm text-muted-foreground">
+                            February 10, 2023 • 12 min read
+                          </p>
                           <h3 className="text-xl font-bold mt-2">
                             Building a CI/CD Pipeline for Frontend Applications
                           </h3>
                           <p className="text-muted-foreground mt-2">
-                            A step-by-step guide to setting up continuous integration and deployment for your frontend
+                            A step-by-step guide to setting up continuous
+                            integration and deployment for your frontend
                             projects.
                           </p>
                           <Link
                             href="/blog/cicd-pipeline-frontend"
-                            className="text-primary inline-flex items-center mt-4"
-                          >
+                            className="text-primary inline-flex items-center mt-4">
                             Read more <ArrowRight className="ml-1 h-4 w-4" />
                           </Link>
                         </div>
@@ -217,15 +226,20 @@ export default function BlogPage() {
                           />
                         </div>
                         <div className="p-6 md:w-2/3">
-                          <p className="text-sm text-muted-foreground">January 5, 2023 • 7 min read</p>
+                          <p className="text-sm text-muted-foreground">
+                            January 5, 2023 • 7 min read
+                          </p>
                           <h3 className="text-xl font-bold mt-2">
                             Accessibility in Web Development: A Practical Guide
                           </h3>
                           <p className="text-muted-foreground mt-2">
-                            Learn how to make your web applications more accessible, with practical tips and tools for
+                            Learn how to make your web applications more
+                            accessible, with practical tips and tools for
                             testing and implementation.
                           </p>
-                          <Link href="/blog/accessibility-guide" className="text-primary inline-flex items-center mt-4">
+                          <Link
+                            href="/blog/accessibility-guide"
+                            className="text-primary inline-flex items-center mt-4">
                             Read more <ArrowRight className="ml-1 h-4 w-4" />
                           </Link>
                         </div>
@@ -246,9 +260,12 @@ export default function BlogPage() {
         <section className="py-12 md:py-16">
           <div className="container px-4 md:px-6">
             <FadeIn className="max-w-3xl mx-auto text-center space-y-4">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Subscribe to my newsletter</h2>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                Subscribe to my newsletter
+              </h2>
               <p className="text-muted-foreground">
-                Get notified when I publish new articles and tutorials. No spam, unsubscribe at any time.
+                Get notified when I publish new articles and tutorials. No spam,
+                unsubscribe at any time.
               </p>
               <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
                 <input
@@ -265,5 +282,5 @@ export default function BlogPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

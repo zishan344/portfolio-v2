@@ -1,11 +1,12 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import NavBar from "@/components/nav-bar"
-import Footer from "@/components/footer"
-import ProjectCard from "@/components/project-card"
-import FadeIn from "@/components/animations/fade-in"
-import StaggerContainer from "@/components/animations/stagger-container"
-import TextReveal from "@/components/animations/text-reveal"
+import NavBar from "@/components/nav-bar";
+import Footer from "@/components/footer";
+import ProjectCard from "@/components/project-card";
+import FadeIn from "@/components/animations/fade-in";
+import StaggerContainer from "@/components/animations/stagger-container";
+import TextReveal from "@/components/animations/text-reveal";
+import { HeroTitle } from "@/components/hero-titl";
 
 export default function PortfolioPage() {
   return (
@@ -14,20 +15,10 @@ export default function PortfolioPage() {
 
       <main className="flex-1">
         {/* Portfolio Hero */}
-        <section className="py-12 md:py-20 bg-muted">
-          <div className="container px-4 md:px-6">
-            <div className="max-w-3xl mx-auto text-center space-y-4">
-              <TextReveal>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Portfolio</h1>
-              </TextReveal>
-              <FadeIn delay={0.2}>
-                <p className="text-xl text-muted-foreground">
-                  A collection of projects that showcase my skills and experience in software development.
-                </p>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
+        <HeroTitle
+          title="My Portfolio"
+          description="A collection of projects that showcase my skills and experience in software development."
+        />
 
         {/* Projects Grid */}
         <section className="py-12 md:py-16">
@@ -84,7 +75,12 @@ export default function PortfolioPage() {
               <ProjectCard
                 title="Real Estate Marketplace"
                 description="A platform for listing and searching properties with advanced filtering."
-                tags={["Next.js", "Tailwind CSS", "Firebase", "Google Maps API"]}
+                tags={[
+                  "Next.js",
+                  "Tailwind CSS",
+                  "Firebase",
+                  "Google Maps API",
+                ]}
                 imageUrl="/placeholder.svg?height=200&width=400"
                 githubUrl="https://github.com"
                 demoUrl="https://example.com"
@@ -113,9 +109,12 @@ export default function PortfolioPage() {
         <section className="py-12 md:py-16 bg-muted">
           <div className="container px-4 md:px-6">
             <FadeIn className="max-w-3xl mx-auto text-center space-y-4 mb-8">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Case Studies</h2>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                Case Studies
+              </h2>
               <p className="text-muted-foreground">
-                In-depth analysis of selected projects, highlighting challenges, solutions, and outcomes.
+                In-depth analysis of selected projects, highlighting challenges,
+                solutions, and outcomes.
               </p>
             </FadeIn>
 
@@ -128,9 +127,12 @@ export default function PortfolioPage() {
                         E-commerce Platform Redesign
                       </h3>
                       <p className="text-muted-foreground mt-2">
-                        How we improved conversion rates by 35% through UX improvements and performance optimization.
+                        How we improved conversion rates by 35% through UX
+                        improvements and performance optimization.
                       </p>
-                      <p className="text-sm text-primary mt-4">Read case study →</p>
+                      <p className="text-sm text-primary mt-4">
+                        Read case study →
+                      </p>
                     </div>
                   </div>
                 </FadeIn>
@@ -144,9 +146,12 @@ export default function PortfolioPage() {
                         Social Media Analytics Dashboard
                       </h3>
                       <p className="text-muted-foreground mt-2">
-                        Building a real-time analytics platform that processes millions of data points daily.
+                        Building a real-time analytics platform that processes
+                        millions of data points daily.
                       </p>
-                      <p className="text-sm text-primary mt-4">Read case study →</p>
+                      <p className="text-sm text-primary mt-4">
+                        Read case study →
+                      </p>
                     </div>
                   </div>
                 </FadeIn>
@@ -159,8 +164,13 @@ export default function PortfolioPage() {
         <section className="py-12 md:py-16">
           <div className="container px-4 md:px-6">
             <FadeIn className="max-w-3xl mx-auto text-center space-y-4 mb-8">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Client Testimonials</h2>
-              <p className="text-muted-foreground">What clients and collaborators have to say about working with me.</p>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                Client Testimonials
+              </h2>
+              <p className="text-muted-foreground">
+                What clients and collaborators have to say about working with
+                me.
+              </p>
             </FadeIn>
 
             <StaggerContainer className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -168,12 +178,16 @@ export default function PortfolioPage() {
                 <div className="rounded-lg border bg-background p-6">
                   <div className="space-y-4">
                     <p className="italic text-muted-foreground">
-                      "Alex delivered our project on time and exceeded our expectations. His attention to detail and
-                      problem-solving skills made a significant difference in the final product."
+                      "Alex delivered our project on time and exceeded our
+                      expectations. His attention to detail and problem-solving
+                      skills made a significant difference in the final
+                      product."
                     </p>
                     <div>
                       <p className="font-semibold">Sarah Johnson</p>
-                      <p className="text-sm text-muted-foreground">CEO, TechStart Inc.</p>
+                      <p className="text-sm text-muted-foreground">
+                        CEO, TechStart Inc.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -183,12 +197,15 @@ export default function PortfolioPage() {
                 <div className="rounded-lg border bg-background p-6">
                   <div className="space-y-4">
                     <p className="italic text-muted-foreground">
-                      "Working with Alex was a pleasure. He not only understood our technical requirements but also
-                      provided valuable insights that improved our product's user experience."
+                      "Working with Alex was a pleasure. He not only understood
+                      our technical requirements but also provided valuable
+                      insights that improved our product's user experience."
                     </p>
                     <div>
                       <p className="font-semibold">Michael Chen</p>
-                      <p className="text-sm text-muted-foreground">Product Manager, InnovateCo</p>
+                      <p className="text-sm text-muted-foreground">
+                        Product Manager, InnovateCo
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -198,12 +215,16 @@ export default function PortfolioPage() {
                 <div className="rounded-lg border bg-background p-6">
                   <div className="space-y-4">
                     <p className="italic text-muted-foreground">
-                      "Alex's technical expertise and communication skills made our collaboration seamless. He's a
-                      developer who truly understands both the technical and business aspects of a project."
+                      "Alex's technical expertise and communication skills made
+                      our collaboration seamless. He's a developer who truly
+                      understands both the technical and business aspects of a
+                      project."
                     </p>
                     <div>
                       <p className="font-semibold">Emily Rodriguez</p>
-                      <p className="text-sm text-muted-foreground">CTO, DigitalSolutions</p>
+                      <p className="text-sm text-muted-foreground">
+                        CTO, DigitalSolutions
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -215,5 +236,5 @@ export default function PortfolioPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

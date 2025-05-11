@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import FadeIn from "@/components/animations/fade-in";
 import StaggerContainer from "@/components/animations/stagger-container";
 import TextReveal from "@/components/animations/text-reveal";
+import { HeroTitle } from "@/components/hero-titl";
 
 export default function ContactPage() {
   return (
@@ -17,23 +18,11 @@ export default function ContactPage() {
 
       <main className="flex-1">
         {/* Contact Hero */}
-        <section className="py-12 md:py-20 bg-muted">
-          <div className="container px-4 md:px-6">
-            <div className="max-w-3xl mx-auto text-center space-y-4">
-              <TextReveal>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Get in Touch
-                </h1>
-              </TextReveal>
-              <FadeIn delay={0.2}>
-                <p className="text-xl text-muted-foreground">
-                  Have a project in mind or want to discuss potential
-                  opportunities? I'd love to hear from you.
-                </p>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
+        <HeroTitle
+          title="Get in Touch"
+          description="Have a project in mind or want to discuss potential opportunities?
+                      I'd love to hear from you."
+        />
 
         {/* Contact Form & Info */}
         <section className="py-12 md:py-16">
