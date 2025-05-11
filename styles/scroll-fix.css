@@ -1,0 +1,55 @@
+/* This file removes double scrollbars and fixes content visibility issues */
+
+/* Reset scrollbar settings */
+html,
+body {
+  overflow-x: hidden !important;
+  height: 100% !important;
+}
+
+html {
+  overflow-y: auto !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: auto !important;
+  min-height: 100%;
+}
+
+/* Ensure content is visible immediately on route change */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 767px) {
+  /* Force content to top of viewport on page transitions */
+  .page-container {
+    transform: translateY(0) !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  /* Disable animations during page transitions to prevent scroll issues */
+  .disable-animations * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Make header stick properly without causing scroll issues */
+  header.sticky,
+  header.fixed {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Add padding to content to prevent it from appearing under header */
+  main {
+    padding-top: 64px !important; /* Ensure this matches your header height */
+    position: relative !important;
+  }
+}

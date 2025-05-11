@@ -1,0 +1,55 @@
+/* Mobile-specific fixes for navigation and page transitions */
+
+/* Prevent white space at top on iOS */
+@supports (-webkit-touch-callout: none) {
+  .ios-fixed-body-fix {
+    height: -webkit-fill-available;
+    width: 100%;
+  }
+}
+
+/* Remove animations on mobile for better performance */
+@media (max-width: 767px) {
+  /* Completely disable unnecessary animations on mobile */
+  .mobile-page-transition,
+  .mobile-page-content,
+  .page-container {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* Prevent framer-motion from causing multiple renders */
+  .framer-motion-div {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Override AnimatePresence behavior on mobile */
+  [data-framer-appear-id],
+  [data-framer-page-portal-exit],
+  [data-framer-page-portal-enter] {
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Fix double scrollbar issue */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* Ensure content is visible immediately */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
