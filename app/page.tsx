@@ -28,11 +28,10 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="flex-1 space-y-4">
                 <div>
-                  <TextReveal>
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-3">
                       Hi, I'm
                     </h1>
-                  </TextReveal>
+                  
 
                   <div className="mt-1 mb-3">
                     <NameDisplay
@@ -42,13 +41,11 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <FadeIn delay={0.2}>
-                  <p className="text-xl text-muted-foreground">
-                    Full Stack Software Engineer specializing in modern web
-                    technologies and creating exceptional digital experiences.
-                  </p>
-                </FadeIn>
-                <FadeIn delay={0.3}>
+                <p className="text-xl text-muted-foreground">
+                  Full Stack Software Engineer specializing in modern web
+                  technologies and creating exceptional digital experiences.
+                </p>
+
                   <div className="flex flex-wrap gap-3">
                     <Button asChild>
                       <Link href="/contact">
@@ -59,8 +56,7 @@ export default function Home() {
                       <Link href="/portfolio">View my work</Link>
                     </Button>
                   </div>
-                </FadeIn>
-                <FadeIn delay={0.4}>
+                
                   <div className="flex gap-4 pt-2">
                     <Link
                       href="https://github.com"
@@ -87,9 +83,8 @@ export default function Home() {
                       </Button>
                     </Link>
                   </div>
-                </FadeIn>
+              
               </div>
-              <ScaleIn delay={0.2}>
                 <div className="flex-shrink-0">
                   <div className="relative h-60 w-60 md:h-80 md:w-80 overflow-hidden rounded-full border-4 border-background shadow-xl">
                     <Image
@@ -101,7 +96,6 @@ export default function Home() {
                     />
                   </div>
                 </div>
-              </ScaleIn>
             </div>
           </div>
         </section>
@@ -109,7 +103,7 @@ export default function Home() {
         <section className="py-12 md:py-16">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <FadeIn>
+            
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                     My Skills
@@ -119,7 +113,7 @@ export default function Home() {
                     stack.
                   </p>
                 </div>
-              </FadeIn>
+              
             </div>
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
               <SkillCard

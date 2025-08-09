@@ -26,7 +26,7 @@ export default function BlogPage() {
         {/* Featured Post */}
         <section className="py-12 md:py-16">
           <div className="container px-4 md:px-6">
-            <FadeIn className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <Card className="overflow-hidden border-none shadow-lg">
                 <CardContent className="p-0">
                   <div className="relative h-64 md:h-80 w-full overflow-hidden">
@@ -58,7 +58,7 @@ export default function BlogPage() {
                   </div>
                 </CardContent>
               </Card>
-            </FadeIn>
+            </div>
           </div>
         </section>
 

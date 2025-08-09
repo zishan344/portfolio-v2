@@ -16,17 +16,16 @@ export default function AboutPage() {
       <NavBar />
 
       <main className="flex-1">
-        {/* About Heros */}
+        {/* About Hero */}
         <section className="py-12 md:py-20 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              <FadeIn direction="right">
+              
                 <div className="space-y-4">
-                  <TextReveal>
-                    <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                      About Me
-                    </h1>
-                  </TextReveal>
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    About Me
+                  </h1>
+
                   <p className="text-xl text-muted-foreground">
                     I'm a passionate Full-Stack software Engineer with over 2
                     years of experience building web applications and digital
@@ -43,8 +42,8 @@ export default function AboutPage() {
                     </Button>
                   </div>
                 </div>
-              </FadeIn>
-              <FadeIn direction="left" delay={0.2}>
+
+              
                 <div className="flex justify-center lg:justify-end">
                   <div className="relative h-80 w-80 overflow-hidden rounded-xl border-4 border-background shadow-xl">
                     <Image
@@ -55,7 +54,7 @@ export default function AboutPage() {
                     />
                   </div>
                 </div>
-              </FadeIn>
+            
             </div>
           </div>
         </section>

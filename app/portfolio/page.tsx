@@ -23,7 +23,7 @@ export default function PortfolioPage() {
         {/* Projects Grid */}
         <section className="py-12 md:py-16">
           <div className="container px-4 md:px-6">
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <ProjectCard
                 title="E-commerce Platform"
                 description="A full-stack e-commerce solution with payment processing and inventory management."
@@ -101,7 +101,7 @@ export default function PortfolioPage() {
                 githubUrl="https://github.com"
                 demoUrl="https://example.com"
               />
-            </StaggerContainer>
+            </div>
           </div>
         </section>
 

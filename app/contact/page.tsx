@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Contact Form */}
-              <FadeIn direction="left">
+              
                 <div className="space-y-6">
                   <div className="space-y-2">
                     <h2 className="text-2xl font-bold">Send me a message</h2>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                     </p>
                   </div>
 
-                  <StaggerContainer className="space-y-4">
+                  <div className="space-y-4">
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
                         <label
@@ -94,12 +94,12 @@ export default function ContactPage() {
                     <Button type="submit" className="w-full">
                       Send Message
                     </Button>
-                  </StaggerContainer>
+                  </div>
                 </div>
-              </FadeIn>
+              
 
               {/* Contact Info */}
-              <FadeIn direction="right" delay={0.2}>
+              
                 <div className="space-y-8">
                   <div className="space-y-2">
                     <h2 className="text-2xl font-bold">Contact Information</h2>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     </p>
                   </div>
 
-                  <StaggerContainer className="space-y-4">
+                  <div className="space-y-4">
                     <div className="flex items-start space-x-4">
                       <Mail className="h-5 w-5 mt-0.5 text-primary" />
                       <div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                         </p>
                       </div>
                     </div>
-                  </StaggerContainer>
+                  </div>
 
                   <div className="space-y-4">
                     <h3 className="font-medium">Connect with me</h3>
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     </div>
                   </FadeIn>
                 </div>
-              </FadeIn>
+            
             </div>
           </div>
         </section>
